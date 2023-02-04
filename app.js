@@ -10,9 +10,9 @@ app.use(cors())
 
 
 //static files
-app.use(express.static(path.join(__dirname,"../front-end/build")));
+app.use(express.static(path.join(__dirname,"./client/build")));
 app.get('*',function(req,res){
-    res.sendFile(path.join(__dirname,"../front-end/build/index.html"))
+    res.sendFile(path.join(__dirname,"./client/build/index.html"))
 });
 
 mongoose.connect("mongodb+srv://Admin-Rachit:Atlas@cluster0.ur4pnxy.mongodb.net/AdrixusDB", {
